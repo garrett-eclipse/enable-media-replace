@@ -46,7 +46,7 @@ class EnableMediaReplacePlugin
     add_action('wp_ajax_emr_dismiss_notices', array($this,'dismiss_notices'));
 
     // editors 
-    add_action( 'add_meta_boxes', function () { add_meta_box('emr-eplace-box', __('Replace Image', 'enable-media-replace'), array($this, 'replace_meta_box'), 'attachment', 'side', 'low'); }  );
+    add_action( 'add_meta_boxes', function () { add_meta_box('emr-replace-box', __('Replace Image', 'enable-media-replace'), array($this, 'replace_meta_box'), 'attachment', 'side', 'low'); }  );
     add_filter('attachment_fields_to_edit', array($this, 'attachment_editor'), 10, 2);
 
     // shortcode
